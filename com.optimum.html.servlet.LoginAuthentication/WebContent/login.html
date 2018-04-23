@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	text-align: center;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Login Page</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+<body>
+	<center>
+		<header>
+			<img src="logo.png" alt="Logo" class="img-fluid">
+		</header>
+		<div class="col-3">
+			<form class="form-signin" method="post" action="UserController">
+
+				<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+				<label for="inputEmail" class="sr-only">Email address</label> <input
+					type="email" id="inputEmail" name="uname" class="form-control"
+					placeholder="Email address" required="" autofocus=""> <label
+					for="inputPassword" class="sr-only">Password</label> <input
+					type="password" id="inputPassword" name="pwd" class="form-control"
+					placeholder="Password" required="">
+
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
+					in</button>
+			</form>
+		</div>
+		<br>
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" data-toggle="modal"
+			data-target="#exampleModal">Forget Password?</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<div class="text-center">
+							<h1 class="text-center">Forgot Password?</h1>
+							<p>You can reset your password here.</p>
+							<div class="panel-body">
+
+								<form class="form" method="post" action="ForgetPassword">
+									<fieldset>
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon"><i
+													class="glyphicon glyphicon-envelope color-blue"></i></span> <input
+													name="forgetpass" id="emailInput"
+													placeholder="email address" class="form-control"
+													type="email">
+											</div>
+										</div>
+										<div class="form-group">
+											<input class="btn btn-lg btn-primary btn-block"
+												value="Send My Password" type="submit">
+										</div>
+									</fieldset>
+								</form>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</center>
+	<div class="footer">©Copyright Optimum Solutions Pte Ltd</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
